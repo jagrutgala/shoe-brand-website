@@ -1,0 +1,55 @@
+.main {
+    display: grid;
+    place-items: center;
+    gap: 4em;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+}
+
+.feature {
+    align-items: center;
+    box-shadow: 0 .8em 1.5em -.1em var(--acColor);
+}
+
+.featureImg {
+    width: 70%;
+}
+
+.featureText {
+    width: 100%;
+    padding: 1em 2em;
+}
+
+.featureTitle {
+    color: var(--acColor);
+}
+
+.featureDesc {
+    color: var(--color);
+}
+
+.sale {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+}
+
+.saleImg {
+    width: 50%;
+}
+
+@media (min-width:800px) {
+    .section {
+    gap: 1.5em;
+    }
+    .feature {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+    }
+}

@@ -1,0 +1,93 @@
+
+.productsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 12em);
+    gap: 1em;
+    padding: 1em 2em;
+    justify-content: center;
+}
+
+.product {
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--bgColor);
+    color: var(--color);
+    border: 2px solid var(--acColor);
+    transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+
+.product:hover,
+.product:focus {
+    transform: translateY(-.5em);
+    box-shadow: 0 .5em 0 0 var(--acColor);
+}
+
+.productPrice {
+    text-align: center;
+}
+
+.productPrice::before {
+    content: '₹';
+}
+
+.productText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0.5em;
+    padding-bottom: 1em;
+    font-size: 1rem;
+}
+
+.sizeLabel::after {
+    content: ':';
+}
+
+.sizeLabel~label::after {
+ content: ",";
+}
+
+.productSize>:last-child::after {
+    content: '';
+}
+
+.productFullSize {
+    position: fixed;
+    width: 60%;
+    top: 15%;
+    left: 20%;
+    z-index: 3;
+}
+
+.productFullSize .productText {
+    font-size: 1.5rem;
+}
+
+.cross {
+    display: none;
+}
+
+.productFullSize .cross {
+    display: inline-block;
+    position: absolute;
+    top: .5em;
+    right: 0.5em;
+    cursor: pointer;
+    padding: 0.5em;
+    z-index: 5;
+}
+
+.productFullSize .cross:hover,
+.productFullSize .cross:focus {
+    color: var(--acColor);
+
+}
+
+
+@media (min-width: 800px) {
+    .productFullSize {
+        width: 40vw;
+        top: 5vw;
+        left: 30vw;
+    }
+}

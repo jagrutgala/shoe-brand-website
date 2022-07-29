@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login In</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/forms.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <!--minified-->
+    <script src="./validation.js" defer></script>
+    <script src="./theme.js" defer></script>
+</head>
+
+<body class="light">
+    <!-- Navbar -->
+    <div>
+        <nav class="nav">
+            <ul class="navList"><li id="logo"><img src="./assets/sole-50.png" alt="Logo"></li></ul>
+            <ul class="navList">
+                <li><a class="navLink" href="./index.html">home</a></li>
+                <li><a class="navLink" href="./products.html">our products</a></li>
+                <li><a class="navLink" href="./about.html">about us</a></li>
+            </ul>
+            <ul class="navList">
+                <li id="themeLi"><button class="navBtn btnTheme" id="btnTheme" type="button" dataThemeState></button></li>
+                <li><a class="navBtn" href="./logIn.html">login</a></li>
+            </ul>
+    </div>
+
+    <main>
+        <section class="formSection">
+            <div class="tabMenu" id="tabMenu">
+                <button class="btnTab activeTab" id="login">Log In</button>
+                <button class="btnTab" id="signup">Sign Up</button>
+            </div>
+            <form class="form tab" id="loginForm" novalidate>
+                <div><label for="lemail">E-mail Id</label></div>
+                <div><input placeholder="example@mail.com" type="email" name="lemail" id="lemail"></div>
+                <div><span class="error" id="lemailError"></span></div>
+
+                <div><label for="lpass">Set Password</label></div>
+                <div>
+                    <input placeholder="strong password" type="password" name="pass" id="lpass">
+                    <button class="btn see" type="button" id="lsee">👁</button>
+                </div>
+                <div class="item">
+                    <span class="error" id="lpassError"></span>
+                </div>
+
+                <div class="btnWrapper">
+                    <button class="btn submit" type="submit" value="login">Login</button>
+                    <button class="btn reset" type="reset" value="reset">Reset</button>
+                </div>
+            </form>
+
+
+            <form class="form tab" id="signupForm" novalidate>
+                <div><label for="name">First Name</label></div>
+                <div><input placeholder="First Name Last Name" type="text" name="name" id="name"></div>
+                <div><span class="error" id="nameError"></span></div>
+
+                <div><label for="email">E-mail Id</label></div>
+                <div><input placeholder="example@mail.com" type="email" name="email" id="email"></div>
+                <div><span class="error" id="emailError"></span></div>
+
+                <div><label for="pass">Set Password</label></div>
+                <div><input placeholder="strong password" type="password" name="pass" id="pass"></div>
+                <div class="item">
+                    <span class="error" id="passError"></span>
+                    <button class="btn see" type="button" id="see">👁</button>
+                </div>
+
+                <div><label for="cpass">Confirm Password</label></div>
+                <div><input placeholder="same strong password" type="password" name="pass" id="cpass"></div>
+                <div><span class="error" id="cpassError"></span></div>
+
+                <div class="buttonWrapper">
+                    <button class="btn submit" type="submit" value="register">Sign Up</button>
+                    <button class="btn reset" type="reset" value="reset">Reset</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <a class="navBtn hidden" id="topLink" href="#logo">&nbsp;⬆&nbsp;</a>
+</body>
+
+</html>

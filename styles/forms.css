@@ -1,0 +1,85 @@
+.formSection { /* Center form on screen */
+    display: grid;
+    place-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.tabMenu {
+    display: flex;
+    width: 100%;
+    border-bottom: 5px solid var(--acColor);
+}
+.btnTab {
+    width: 100%;
+    border: none;
+    background-color: lightgray;
+    transition: filter 200ms ease;
+}
+
+.btnTab:hover,
+.btnTab:focus {
+    filter: brightness(110%);
+}
+
+.btnTab.activeTab {
+    background-color: var(--acColor);
+}
+
+.form { /*  */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: .5em;
+    align-items: center;
+    color: var(--acColor);
+    padding: 2em 1em;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid currentColor;
+    padding: 0.5em 1em;
+}
+
+.error {
+    color: var(--erColor);
+    font-size: .75em;
+}
+
+.inputError {
+    border-bottom: 2px solid var(--erColor);
+    font-size: .75em;
+}
+
+.btnWrapper {
+    display: flex;
+    gap: .25em;
+}
+
+.btn {
+    width: max-content;
+    padding: .25em 1em;
+    font-weight: bold;
+    border: 2px solid var(--acColor);
+    border-radius: 15px;
+    background-color: lightgray;
+    transition: background-color 200ms ease;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--acColor);
+}
+
+.see {
+    margin-top: .5em;
+}
+
+
+@media (min-width:800px) {
+    .form {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
